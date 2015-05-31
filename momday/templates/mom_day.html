@@ -25,7 +25,22 @@ $(".fancybox")
 
 
 </script>
+<script type="text/javascript">
 
+$(function(){
+ $("#vid").on("click", function(){
+  $(".vidfancybox").eq(0).trigger("click");
+  return false;
+});
+
+$(".vidfancybox")
+   .attr('rel','gallery')
+   .fancybox({
+   padding:0
+});
+});
+
+</script>
 </head>
 
 
@@ -43,7 +58,7 @@ $(".fancybox")
 -->
 <map name="flowermap" id="flowermap">
   <area shape="circle" coords="100,150,75" id="slid" href="#contentdiv">
-  <area shape="circle" coords="250,200,100" onclick="Vidzzz()">
+  <area shape="circle" coords="250,200,100" id="vid" href="#videodiv">
   <area shape="circle" coords="385,100,60" onclick="Poem()">
   <area shape="circle" coords="460,235,85" onclick="Stories()">
 </map>
@@ -62,6 +77,12 @@ $(".fancybox")
   <a class="fancybox"><img src="./static/mom_pix/10.JPG" alt=""></a>
 
 
+</div>
+
+<div style="display: none;" id="videodiv">
+  <a class="vidfancybox"><iframe width="420" height="315"
+			      src="https://www.youtube.com/embed/tsfnuyyjaB0?autoplay=1">
+      </iframe>
 </div>
 
 </body>
