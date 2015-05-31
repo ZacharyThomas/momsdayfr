@@ -1,0 +1,67 @@
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="../static/mom_day_fx.js"></script>
+<script src="../static/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="../static/jquery.fancybox.css" media="screen" />
+<!--
+    $(".fancyboxLauncher").on("click", function () {
+      $(".fancybox").eq(0).trigger("click");
+      return false;
+    });
+-->
+<script type="text/javascript">
+$(function(){
+ $("#slid").on("click", function(){
+  $(".fancybox").eq(0).trigger("click");
+  return false;
+});
+
+$(".fancybox")
+   .attr('rel','gallery')
+   .fancybox({
+   padding:0
+});
+});
+
+
+</script>
+
+</head>
+
+
+
+<body>
+
+
+
+  Mom's day stuffzzzz aughhhhhhhhhhhhhhhhhh
+  <center>
+      <img src="{{ url_for('static',filename='mom_flowers.jpg') }}" style="width:597px;height:719px;" alt="" usemap="#flowermap">
+  </center>
+<!--
+  <a class="fancyboxLauncher" title="slides">
+-->
+<map name="flowermap" id="flowermap">
+  <area shape="circle" coords="100,150,75" id="slid" href="#contentdiv">
+  <area shape="circle" coords="250,200,100" onclick="Vidzzz()">
+  <area shape="circle" coords="385,100,60" onclick="Poem()">
+  <area shape="circle" coords="460,235,85" onclick="Stories()">
+</map>
+
+<div style="display: none;" id="contentdiv">
+  <a class="fancybox" ><img src="./static/mom_pix/00.JPG" alt=""></a>
+  <a class="fancybox" ><img src="./static/mom_pix/01.jpg" alt=""></a>
+  <a class="fancybox" ><img src="./static/mom_pix/02.JPG" alt=""></a>
+  <a class="fancybox" ><img src="./static/mom_pix/03.JPG" alt=""></a>
+  <a class="fancybox" ><img src="./static/mom_pix/04.JPG" alt=""></a>
+  <a class="fancybox" ><img src="./static/mom_pix/05.jpg" alt=""></a>
+  <a class="fancybox"><img src="./static/mom_pix/06.JPG" alt=""></a>
+  <a class="fancybox"><img src="./static/mom_pix/07.JPG" alt=""></a>
+  <a class="fancybox"><img src="./static/mom_pix/08.JPG" alt=""></a>
+  <a class="fancybox"><img src="./static/mom_pix/09.PNG" alt=""></a>
+  <a class="fancybox"><img src="./static/mom_pix/10.JPG" alt=""></a>
+
+
+</div>
+
+</body>
