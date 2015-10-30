@@ -5,5 +5,9 @@ app = Flask(__name__)
 def hello():
     return render_template ('mom_day.html')
 
+@app.route('/classic')
+def classic():
+    return render_template ('bill.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
